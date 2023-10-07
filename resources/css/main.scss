@@ -1,0 +1,21 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.app {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-gap: 8px;
+    min-height: 100%;
+}
+
+.window, .workingArea {
+    background-color: #ffffff;
+}
+
+.window {
+    padding: 16px;
+}
