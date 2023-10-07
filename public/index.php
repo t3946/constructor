@@ -23,10 +23,13 @@
         </div>
 
         <div class="workingArea page">
-            <h1>Моя новая страница</h1>
+            <h1>Моя новая <b>страница</b></h1>
         </div>
 
-        <div class="window elements">Elements</div>
+        <div class="window elements">
+            <h2>Elements</h2>
+            <div class="elementsList"></div>
+        </div>
     </div>
 </body>
 </html>
