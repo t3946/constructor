@@ -38,9 +38,26 @@
         <h1>Моя новая <b>страница</b></h1>
     </div>
 
-    <div class="window elements">
-        <h2>Elements</h2>
-        <div class="elementsList"></div>
+    <div class="rightSidebar">
+        <div class="window dom">
+            <h2>DOM</h2>
+            <div class="elementsList"></div>
+        </div>
+
+        <div class="window">
+            <h2>Properties</h2>
+
+            <table class="tableProperties">
+                <tbody>
+                <tr>
+                    <td>
+                        <div class="caption">class</div>
+                    </td>
+                    <td><input type="text"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
 </body>

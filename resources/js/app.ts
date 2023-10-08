@@ -1,11 +1,11 @@
 import {Page} from '@js/src/Page';
-import {ElementsPanel} from '@js/src/ElementsPanel';
+import {DomPanel} from '@js/src/DomPanel';
 import {ToolsPanel} from "@js/src/ToolsPanel";
 
 class Main {
   public modules: {
     Page: Page,
-    ElementsPanel: ElementsPanel,
+    ElementsPanel: DomPanel,
     ToolsPanel: ToolsPanel,
   };
 
@@ -18,7 +18,7 @@ class Main {
       };
 
       this.initModule('.page', Page);
-      this.initModule('.elements', ElementsPanel);
+      this.initModule('.dom', DomPanel);
       this.initModule('.tools', ToolsPanel);
     });
   }

@@ -22,3 +22,33 @@ body, html {
 .window {
     padding: 16px;
 }
+
+.rightSidebar {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 8px;
+
+    .tableProperties {
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+
+        .caption {
+            padding: 5px 10px;
+        }
+
+        td {
+            padding: 0;
+            border: 1px solid black;
+            height: 30px;
+
+            input {
+                border: 0;
+                outline: none;
+                height: 30px;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
