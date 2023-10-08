@@ -36,6 +36,11 @@
 
     <div class="window page">
         <h1>My new <i>page</i></h1>
+
+        <h2>Subtitle</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque eveniet expedita maxime minus obcaecati possimus quod repellendus soluta voluptas. Aliquid aperiam ex expedita id neque quisquam quo saepe veniam.
+        </p>
     </div>
 
     <div class="rightSidebar">

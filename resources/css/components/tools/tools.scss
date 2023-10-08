@@ -6,12 +6,12 @@
 
   .item {
     padding: 5px 10px;
-    background: #f3f3f3;
+    background: map-get($colors, 'gray1');
     border-radius: 3px;
     margin-bottom: 8px;
 
     &:hover {
-      background: #e3e3e3;
+      background: map-get($colors, 'gray2');
       cursor: pointer;
     }
   }

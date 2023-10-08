@@ -1,0 +1,23 @@
+.tableProperties {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+
+  .caption {
+    padding: 5px 10px;
+  }
+
+  td {
+    padding: 0;
+    border: 1px solid black;
+    height: 30px;
+
+    input {
+      border: 0;
+      outline: none;
+      height: 30px;
+      width: 100%;
+      display: block;
+    }
+  }
+}

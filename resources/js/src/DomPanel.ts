@@ -12,6 +12,12 @@ export class DomPanel {
     App.modules.Page.getRoot().on('domChange', () => this.updateView());
 
     this.updateView();
+
+    this.$elementsPanel.on('click', '.tagName', (e) => {
+      this.$elementsPanel.find('.tagName').removeClass('tagName_theme_selected')
+      e.target.classList.add('tagName_theme_selected');
+      console.log(e.target.dataset.key);
+    });
   }
 
   public buildTree($source, $dest, level = 0) {
