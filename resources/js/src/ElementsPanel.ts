@@ -1,4 +1,4 @@
-import {Cash} from "cash-dom/dist/cash";
+import {Cash} from "cash-dom";
 import App from "@js/app";
 
 export class ElementsPanel {

@@ -1,4 +1,4 @@
-import {Cash} from "cash-dom/dist/cash";
+import {Cash} from "cash-dom";
 
 export class Page {
   private readonly $page: Cash;
