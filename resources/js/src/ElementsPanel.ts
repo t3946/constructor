@@ -9,6 +9,8 @@ export class ElementsPanel {
     this.$elementsPanel = $(elem);
     this.$elementsList = this.$elementsPanel.find('.elementsList');
 
+    App.modules.Page.getRoot().on('domChange', () => this.updateView());
+
     this.updateView();
   }
 

@@ -1,10 +1,12 @@
 import {Page} from '@js/src/Page';
 import {ElementsPanel} from '@js/src/ElementsPanel';
+import {ToolsPanel} from "@js/src/ToolsPanel";
 
 class Main {
   public modules: {
     Page: Page,
     ElementsPanel: ElementsPanel,
+    ToolsPanel: ToolsPanel,
   };
 
   constructor() {
@@ -12,10 +14,12 @@ class Main {
       this.modules = {
         Page: null,
         ElementsPanel: null,
+        ToolsPanel: null,
       };
 
       this.initModule('.page', Page);
       this.initModule('.elements', ElementsPanel);
+      this.initModule('.tools', ToolsPanel);
     });
   }
 

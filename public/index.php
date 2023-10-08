@@ -29,19 +29,19 @@
         ?>
         <ul class="list">
             <?php foreach ($elements as $elem): ?>
-                <li class="item"><?= '&lt' . strtoupper($elem) . '&gt' ?></li>
+                <li class="item" data-elem="<?= $elem ?>"><?= '&lt' . strtoupper($elem) . '&gt' ?></li>
             <?php endforeach ?>
         </ul>
     </div>
 
-    <div class="workingArea page">
+    <div class="window page">
         <h1>Моя новая <b>страница</b></h1>
     </div>
 
     <div class="window elements">
         <h2>Elements</h2>
         <div class="elementsList"></div>
-        </div>
     </div>
+</div>
 </body>
 </html>
