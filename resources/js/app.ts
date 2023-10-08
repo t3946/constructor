@@ -1,25 +1,29 @@
 import {Page} from '@js/src/Page';
 import {DomPanel} from '@js/src/DomPanel';
 import {ToolsPanel} from "@js/src/ToolsPanel";
+import {Properties} from "@js/src/Properties";
 
 class Main {
   public modules: {
     Page: Page,
-    ElementsPanel: DomPanel,
+    DomPanel: DomPanel,
     ToolsPanel: ToolsPanel,
+    Properties: Properties,
   };
 
   constructor() {
     $(() => {
       this.modules = {
         Page: null,
-        ElementsPanel: null,
+        DomPanel: null,
         ToolsPanel: null,
+        Properties: null,
       };
 
       this.initModule('.page', Page);
       this.initModule('.dom', DomPanel);
       this.initModule('.tools', ToolsPanel);
+      this.initModule('.properties', Properties);
     });
   }
 

@@ -3,7 +3,7 @@ import App from "@js/app";
 
 export class DomPanel {
   private readonly $elementsPanel: Cash;
-  private readonly $elementsList: Cash;
+  public readonly $elementsList: Cash;
 
   constructor(elem) {
     this.$elementsPanel = $(elem);
@@ -16,7 +16,11 @@ export class DomPanel {
     this.$elementsPanel.on('click', '.tagName', (e) => {
       this.$elementsPanel.find('.tagName').removeClass('tagName_theme_selected')
       e.target.classList.add('tagName_theme_selected');
-      console.log(e.target.dataset.key);
+
+      const key = e.target.dataset.key;
+      const event = new CustomEvent('selectItem', {detail: {key}});
+
+      this.$elementsList[0].dispatchEvent(event);
     });
   }
 

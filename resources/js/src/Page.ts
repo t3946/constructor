@@ -10,6 +10,10 @@ export class Page {
     this.addIds(this.$page);
   }
 
+  public getElementByKey(key: string): Cash {
+    return this.$page.find(`[data-key=${key}]`);
+  }
+
   public generateKey() {
     const key = 'element_' + this.nextElementIdNumber;
 
@@ -46,7 +50,7 @@ export class Page {
     this.$page[0].dispatchEvent(event);
   }
 
-  public getRoot() {
+  public getRoot(): Cash {
     return this.$page;
   }
 }

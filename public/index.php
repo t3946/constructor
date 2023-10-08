@@ -37,8 +37,8 @@
     <div class="window page">
         <h1>My new <i>page</i></h1>
 
-        <h2>Subtitle</h2>
-        <p>
+        <h2 class="color_blue">Subtitle</h2>
+        <p class="color_green">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cumque eveniet expedita maxime minus obcaecati possimus quod repellendus soluta voluptas. Aliquid aperiam ex expedita id neque quisquam quo saepe veniam.
         </p>
     </div>
@@ -49,7 +49,7 @@
             <div class="elementsList"></div>
         </div>
 
-        <div class="window">
+        <div class="window properties">
             <h2>Properties</h2>
 
             <table class="tableProperties">
@@ -58,7 +58,7 @@
                     <td>
                         <div class="caption">class</div>
                     </td>
-                    <td><input type="text"></td>
+                    <td><input type="text" name="classAttribute"></td>
                 </tr>
                 </tbody>
             </table>
