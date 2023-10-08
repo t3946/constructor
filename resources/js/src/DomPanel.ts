@@ -16,14 +16,19 @@ export class DomPanel {
 
   public buildTree($source, $dest, level = 0) {
     for (const elem of $source.children()) {
-      const $newItem = $(`<div class="tagGroup"><div class="tagName" style="padding-left: ${level * 8}px">${elem.tagName}</div></div>`);
+      const $newGroup = $(`<div class="tagGroup"></div>`)
+      const $newItem = $(`<div class="tagName" style="padding-left: ${level * 8}px">${elem.tagName}</div>`);
       const $elem = $(elem);
+      const key = $elem.data('key');
+
+      $newItem.attr('data-key', key);
+      $newItem.appendTo($newGroup);
 
       if ($elem.children()) {
-        this.buildTree($elem, $newItem, level + 1);
+        this.buildTree($elem, $newGroup, level + 1);
       }
 
-      $dest.append($newItem);
+      $dest.append($newGroup);
     }
   }
 

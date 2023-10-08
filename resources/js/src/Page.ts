@@ -38,10 +38,12 @@ export class Page {
     $newElement.text('New element');
     $newElement.appendTo(this.$page);
 
+    this.addIds(this.$page);
+
+    //notify app about change
     const event = new CustomEvent('domChange');
 
     this.$page[0].dispatchEvent(event);
-    this.addIds(this.$page);
   }
 
   public getRoot() {

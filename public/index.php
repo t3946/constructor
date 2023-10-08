@@ -35,7 +35,7 @@
     </div>
 
     <div class="window page">
-        <h1>Моя новая <b>страница</b></h1>
+        <h1>My new <i>page</i></h1>
     </div>
 
     <div class="rightSidebar">
