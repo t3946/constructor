@@ -1,5 +1,6 @@
 import {Cash} from "cash-dom";
 import App from "@js/app";
+import Sortable from 'sortablejs';
 
 export class DomPanel {
   private readonly $elementsPanel: Cash;
@@ -26,16 +27,21 @@ export class DomPanel {
 
   public buildTree($source, $dest, level = 0) {
     for (const elem of $source.children()) {
-      const $newGroup = $(`<div class="tagGroup"></div>`)
-      const $newItem = $(`<div class="tagName" style="padding-left: ${level * 8}px">${elem.tagName}</div>`);
+      const $newGroup = $(`<div class="tagGroup nested-sortable"></div>`);
+      const $newItem = $(`<div class="tagName">${elem.tagName}</div>`);
       const $elem = $(elem);
       const key = $elem.data('key');
 
       $newItem.attr('data-key', key);
       $newItem.appendTo($newGroup);
 
-      if ($elem.children()) {
-        this.buildTree($elem, $newGroup, level + 1);
+      if ($elem.children().length > 0) {
+        this.buildTree($elem, $newItem, level + 1);
+      } else {
+        //empty group for insert data
+        const $newGroup2 = $(`<div class="tagGroup nested-sortable"></div>`);
+        // console.log($newGroup2);
+        $newGroup2.appendTo($newItem);
       }
 
       $dest.append($newGroup);
@@ -48,5 +54,14 @@ export class DomPanel {
     const $pageDom: Cash = App.modules.Page.getRoot();
 
     this.buildTree($pageDom, this.$elementsList);
+
+    $('.nested-sortable').each((i, e) => {
+      new Sortable(e, {
+        group: 'nested',
+        animation: 100,
+        fallbackOnBody: true,
+        swapThreshold: 0.5,
+      });
+    });
   }
 }

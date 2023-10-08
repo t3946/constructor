@@ -1,5 +1,5 @@
 <?php
-    $assetsHash = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/dist/hash')
+$assetsHash = file_get_contents($_SERVER['DOCUMENT_ROOT'] . '/dist/hash')
 ?>
 
 <!DOCTYPE html>
