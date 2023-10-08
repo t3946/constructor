@@ -1,4 +1,5 @@
 import {Cash} from "cash-dom";
+import App from "@js/app";
 
 export class Page {
   private readonly $page: Cash;
@@ -8,6 +9,16 @@ export class Page {
     this.$page = $(elem);
 
     this.addIds(this.$page);
+
+    App.callAfterInit.push(() => {
+      App.modules.DomPanel.$elementsList.on('selectItem', (e) => {
+        const $currentElement = App.modules.Page.getElementByKey(e.detail.key);
+
+        this.$page.find('[data-status=current]').attr('data-status', null);
+
+        $currentElement.attr('data-status', 'current');
+      });
+    });
   }
 
   public getElementByKey(key: string): Cash {

@@ -43,3 +43,8 @@ body, html {
 .color_blue {
     color: blue;
 }
+
+[data-status="current"] {
+    outline: 3px solid map-get($colors, 'blue1');
+    outline-offset: 3px;
+}

@@ -4,6 +4,8 @@ import {ToolsPanel} from "@js/src/ToolsPanel";
 import {Properties} from "@js/src/Properties";
 
 class Main {
+  public callAfterInit: Function[] = [];
+
   public modules: {
     Page: Page,
     DomPanel: DomPanel,
@@ -24,6 +26,10 @@ class Main {
       this.initModule('.dom', DomPanel);
       this.initModule('.tools', ToolsPanel);
       this.initModule('.properties', Properties);
+
+      for (const f of this.callAfterInit) {
+        f();
+      }
     });
   }
 
